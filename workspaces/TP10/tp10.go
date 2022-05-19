@@ -50,11 +50,12 @@ var worldCities = []string{
 	"Rabat",
 }
 
+
 func main() {
-    worldCapitals := // To complete
+    worldCapitals := make(map[string]string, len(worldCountries))
     
     for i, country := range worldCountries {
-        // To complete
+        worldCapitals[country] = 
     }
     
     for country, city := range worldCapitals {

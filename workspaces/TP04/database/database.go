@@ -12,12 +12,12 @@ var ken = Person{"Ken Thompson", 74}
 var rob = Person{"Rob Pike", 62}
 
 // GetPerson returns a person
-func GetPerson(name string) Person {
+func GetPerson(name string) *Person {
 	switch name {
 	case "Ken":
-		return ken
+		return &ken
 	case "Rob":
-		return rob
+		return &rob
 	}
 	panic("unknow person")
 }

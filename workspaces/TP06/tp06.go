@@ -8,6 +8,9 @@ import (
 
 const eurosDollarsRate = 1.168907
 
+type Euros float64
+type Dollars float64
+
 var (
 	myEuros    Euros   = 123.45
 	myDollars  Dollars = 678.9
@@ -21,10 +24,18 @@ func main() {
 
 func formatMoney(val interface{}) string {
 	// Use a type switch to format money values with the correct sign
+	switch val.(type) {
+	case Euros:
+		// In this block var a has type int
+		return fmt.Sprintf("%.2f€", val)
+	case Dollars:
+		// In this block var a has type string
+		return fmt.Sprintf("%.2f$", val)
+	}
 	return ""
 }
 
 func eurosToDollars(euros Euros) Dollars {
 	// Use type conversion to return the converted amount
-	return 0
+	return Dollars(euros * eurosDollarsRate)
 }

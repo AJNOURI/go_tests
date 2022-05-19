@@ -41,9 +41,10 @@ func main() {
 	knownCountries := []string{}
 
 	// Complete the following code
-	for ... // Iterate over all countries in worldCountries
-		if  { // Check if worldCapitals has a key that matches country :
-			  // 	use the declaration of an `ok` variable in the if condition
+	for _, country := range worldCountries { // Iterate over all countries in worldCountries
+		var city = worldCapitals[country]
+		if city != "" { // Check if worldCapitals has a key that matches country :
+			// 	use the declaration of an `ok` variable in the if condition
 			fmt.Printf("We know %s's capital: it's %s 😎\n", country, city)
 			knownCountries = append(knownCountries, country)
 		} else {
@@ -51,9 +52,7 @@ func main() {
 		}
 	}
 
-
 	fmt.Println("\nWe know capitals for the following countries:")
-
 
 	// Sort knownCountries : Use package sort of the standard library
 

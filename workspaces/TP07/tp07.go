@@ -4,7 +4,8 @@ import (
 	"fmt"
 )
 
-type book // Define this
+//type book // Define this
+type book struct { title string, author string, date int}
 
 var bookList = []book {
 	{"Computing Machinery and Intelligence", "Alan Turing", 1950},
@@ -31,4 +32,5 @@ func main() {
 
 func isBookAuthor(b book, author string) bool {
 	// Check if author matches book's author
+	if book.author == author
 }

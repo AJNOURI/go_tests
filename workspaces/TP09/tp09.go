@@ -11,7 +11,7 @@ var worldCountries = []string{
 	"Poland",
 	"Romania",
 	"Netherlands",
-	"Belgium",
+	"Belgium", ///
 	"Nigeria",
 	"Ethiopia",
 	"Egypt",
@@ -37,18 +37,19 @@ var americanCountries = []string{
 	"Chile",
 }
 
-func main() {
-    printSliceInfo(worldCountries, "worldCountries")
+var NewWorldCountries []string
 
-	europeanCountries := // Code this
+func main() {
+	printSliceInfo(worldCountries, "worldCountries")
+
+	europeanCountries := worldCountries[:9]
 	printSliceInfo(europeanCountries, "europeanCountries")
 
-	africanCountries := // Code this
+	africanCountries := worldCountries[9:]
 	printSliceInfo(africanCountries, "africanCountries")
 
-	for _, c := range americanCountries {
-		// Code this: Add c to worldcountries
-	}
+	worldCountries := append(worldCountries, americanCountries...)
+
 	printSliceInfo(worldCountries, "worldCountries")
 }
 
