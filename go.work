@@ -1,0 +1,29 @@
+go 1.18
+
+use (
+	./workspaces/TP02
+	./workspaces/TP03
+	./workspaces/TP04
+	./workspaces/TP05
+	./workspaces/TP06
+	./workspaces/TP07
+	./workspaces/TP08
+	./workspaces/TP09
+	./workspaces/TP10
+	./workspaces/TP11
+	./workspaces/TP12
+	./workspaces/TP13
+	./workspaces/TP14
+	./workspaces/TP15
+	./workspaces/TP16
+	./workspaces/TP17
+	./workspaces/TP17bis
+	./workspaces/TP18
+	./workspaces/TP19
+	./workspaces/TP20
+	./workspaces/TP21
+	./workspaces/TP22
+	./workspaces/TP24
+	./workspaces/TPgenerics
+	./workspaces/TPnet
+)
